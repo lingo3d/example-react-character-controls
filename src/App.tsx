@@ -18,7 +18,9 @@ const Game = () => {
   const dummyRef = useRef<types.Dummy>(null);
   const { width } = useWindowSize();
   const [strideMode, setStrideMode] = useState<"aim" | "free">("aim");
-  const [lockTargetRotation, setlockTargetRotation] = useState<false | "lock" | "dynamic-lock">("lock");
+  const [lockTargetRotation, setlockTargetRotation] = useState<
+    false | "lock" | "dynamic-lock"
+  >("lock");
 
   useEffect(() => {
     const dummy = dummyRef.current;
@@ -79,36 +81,38 @@ const Game = () => {
           bloomThreshold={0.5}
         />
       </World>
-      <ChoiceGroup
-        defaultSelectedKey="lock"
-        options={[
-          { key: "false", text: "false 不锁定" },
-          { key: "lock", text: "lock 锁定" },
-          { key: "dynamic-lock", text: "dynamic-lock 动态锁定" },
-        ]}
-        onChange={(_, option) => {
-          if (!option) return
-          if (option.key === "false")
-            setlockTargetRotation(false)
-          else
-            setlockTargetRotation(option.key as any)
-        }}
-        label="Camera lockTargetRotation 相机锁定目标旋转"
-        required={true}
-      />
-      <ChoiceGroup
-        defaultSelectedKey="aim"
-        options={[
-          { key: "aim", text: "aim 瞄准模式" },
-          { key: "free", text: "free 自由模式" },
-        ]}
-        onChange={(_, option) => {
-          if (!option) return
-          setStrideMode(option.key as any)
-        }}
-        label="Dummy strideMode 角色步伐模式"
-        required={true}
-      />
+      <div className="absolute  backdrop-blur-xl -mt-10 px-4 top-10">
+        <div className={"h-2"} />
+        <ChoiceGroup
+          defaultSelectedKey="lock"
+          options={[
+            { key: "false", text: "false 不锁定" },
+            { key: "lock", text: "lock 锁定" },
+            { key: "dynamic-lock", text: "dynamic-lock 动态锁定" },
+          ]}
+          onChange={(_, option) => {
+            if (!option) return;
+            if (option.key === "false") setlockTargetRotation(false);
+            else setlockTargetRotation(option.key as any);
+          }}
+          label="Camera lockTargetRotation 相机锁定目标旋转"
+          required={true}
+        />
+        <div className={"h-4"} />
+        <ChoiceGroup
+          defaultSelectedKey="aim"
+          options={[
+            { key: "aim", text: "aim 瞄准模式" },
+            { key: "free", text: "free 自由模式" },
+          ]}
+          onChange={(_, option) => {
+            if (!option) return;
+            setStrideMode(option.key as any);
+          }}
+          label="Dummy strideMode 角色步伐模式"
+          required={true}
+        />
+      </div>
     </>
   );
 };
