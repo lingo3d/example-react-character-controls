@@ -16,7 +16,7 @@ specifiers:
 
 dependencies:
   '@fluentui/react': 8.77.0_fzknh3pugl53jp7xsetxkg5ani
-  lingo3d-react: 1.2.226_biqbaboplfbrettd7655fr4n2y
+  lingo3d-react: 1.2.234_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -740,7 +740,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001358
-      electron-to-chromium: 1.4.165
+      electron-to-chromium: 1.4.167
       node-releases: 2.0.5
       update-browserslist-db: 1.0.3_browserslist@4.21.0
     dev: true
@@ -845,8 +845,8 @@ packages:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
     dev: true
 
-  /electron-to-chromium/1.4.165:
-    resolution: {integrity: sha512-DKQW1lqUSAYQvn9dnpK7mWaDpWbNOXQLXhfCi7Iwx0BKxdZOxkKcCyKw1l3ihWWW5iWSxKKbhEUoNRoHvl/hbA==}
+  /electron-to-chromium/1.4.167:
+    resolution: {integrity: sha512-lPHuHXBwpkr4RcfaZBKm6TKOWG/1N9mVggUpP4fY3l1JIUU2x4fkM8928smYdZ5lF+6KCTAxo1aK9JmqT+X71Q==}
     dev: true
 
   /esbuild-android-64/0.14.47:
@@ -1211,8 +1211,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /lingo3d-react/1.2.226_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-LaBDjQCvo5myYMWfM0BQ/ki4hd66Ix3jMy43LN+e+fqW1b++Rqp+/g+IBNzgMMe3/6S5lnObWFx8KfK0AMtiMQ==}
+  /lingo3d-react/1.2.234_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-NdIeO8bnhYXjiKsa/DjQ7KggJo4U6TrvfgFm7ZUnkZ5to5AuYj4oSyStMV2WwONBFQzKQHhiI4Ffv1QjuiIARA==}
     peerDependencies:
       react: '18'
     dependencies:
@@ -1223,7 +1223,7 @@ packages:
       '@lincode/reactivity': 1.0.65
       '@lincode/utils': 1.2.51
       '@types/three': 0.140.0
-      lingo3d: 1.10.263
+      lingo3d: 1.10.273
       nanoid: 3.3.4
       popmotion: 11.0.3
       react: 18.2.0
@@ -1232,8 +1232,8 @@ packages:
       - react-dom
     dev: false
 
-  /lingo3d/1.10.263:
-    resolution: {integrity: sha512-oJHmX08L/5/J3fkW2wYNQzlq1qYMm9Fgwyl4MYgx4w+2wAicitVZGKvZgktdB05kcvTT6Tut8jp0+TixWBPLZQ==}
+  /lingo3d/1.10.273:
+    resolution: {integrity: sha512-/6h36odYwj6Kq7fBaj6KEQjHgHdOOpgYOnwLUUNkR5WLLW3zzBmqhQUYL27SNk+To6yXdv8KYplKCf5r4LdgJg==}
     dependencies:
       '@lincode/events': 1.0.24
       '@lincode/filetypes': 1.0.1
@@ -1246,8 +1246,8 @@ packages:
       browser-fs-access: 0.29.6
       cannon-es: 0.19.0
       postprocessing: 6.28.1_three@0.140.2
-      preact: 10.8.1
-      preact-custom-element: 4.2.1_preact@10.8.1
+      preact: 10.8.2
+      preact-custom-element: 4.2.1_preact@10.8.2
       prettier: 2.7.1
       three: 0.140.2
       tweakpane: 3.1.0
@@ -1416,16 +1416,16 @@ packages:
       three: 0.140.2
     dev: false
 
-  /preact-custom-element/4.2.1_preact@10.8.1:
+  /preact-custom-element/4.2.1_preact@10.8.2:
     resolution: {integrity: sha512-/fiEEAyC+MXRlCBRmv/owoN5BLpO2nF/MF3YBHLtp4C2lNqlhV+a4he74A5DhfDoRmxDHm0sYVgQzWFEyzTDsw==}
     peerDependencies:
       preact: 10.x
     dependencies:
-      preact: 10.8.1
+      preact: 10.8.2
     dev: false
 
-  /preact/10.8.1:
-    resolution: {integrity: sha512-p5CKQ0MCEXTGKGOHiFaNE2V2nDq2hvDHykXvIlz+4lbfJ9umLZr8JS/fa1bXUwRcHXK+Ljk8zqmDhr25n0LtVg==}
+  /preact/10.8.2:
+    resolution: {integrity: sha512-AKGt0BsDSiAYzVS78jZ9qRwuorY2CoSZtf1iOC6gLb/3QyZt+fLT09aYJBjRc/BEcRc4j+j3ggERMdNE43i1LQ==}
     dev: false
 
   /prettier/2.7.1:

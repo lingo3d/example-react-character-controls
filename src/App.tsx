@@ -1,3 +1,4 @@
+import { Dropdown, IDropdownStyles } from "@fluentui/react";
 import {
   Dummy,
   Model,
@@ -10,7 +11,6 @@ import {
   useWindowSize,
   keyboard,
 } from "lingo3d-react";
-import { ChoiceGroup } from "@fluentui/react/lib/ChoiceGroup";
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
@@ -21,6 +21,10 @@ const Game = () => {
   const [lockTargetRotation, setlockTargetRotation] = useState<
     false | "lock" | "dynamic-lock"
   >("lock");
+
+  const dropdownStyles: Partial<IDropdownStyles> = {
+    dropdown: { width: 300 },
+  };
 
   useEffect(() => {
     const dummy = dummyRef.current;
@@ -83,34 +87,36 @@ const Game = () => {
       </World>
       <div className="absolute  backdrop-blur-xl -mt-10 px-4 top-10">
         <div className={"h-2"} />
-        <ChoiceGroup
-          defaultSelectedKey="lock"
+        <Dropdown
+          placeholder="Select an option"
+          label="Camera lockTargetRotation 相机锁定目标旋转"
           options={[
             { key: "false", text: "false 不锁定" },
             { key: "lock", text: "lock 锁定" },
             { key: "dynamic-lock", text: "dynamic-lock 动态锁定" },
           ]}
+          styles={dropdownStyles}
           onChange={(_, option) => {
             if (!option) return;
             if (option.key === "false") setlockTargetRotation(false);
             else setlockTargetRotation(option.key as any);
           }}
-          label="Camera lockTargetRotation 相机锁定目标旋转"
-          required={true}
+          defaultSelectedKey="lock"
         />
         <div className={"h-4"} />
-        <ChoiceGroup
-          defaultSelectedKey="aim"
+        <Dropdown
+          placeholder="Select an option"
+          label="Dummy strideMode 角色步伐模式"
           options={[
             { key: "aim", text: "aim 瞄准模式" },
             { key: "free", text: "free 自由模式" },
           ]}
+          styles={dropdownStyles}
           onChange={(_, option) => {
             if (!option) return;
             setStrideMode(option.key as any);
           }}
-          label="Dummy strideMode 角色步伐模式"
-          required={true}
+          defaultSelectedKey="aim"
         />
       </div>
     </>
