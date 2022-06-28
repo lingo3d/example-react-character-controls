@@ -101,7 +101,6 @@ const Game = () => {
             if (option.key === "false") setlockTargetRotation(false);
             else setlockTargetRotation(option.key as any);
           }}
-          defaultSelectedKey="lock"
         />
         <div className={"h-4"} />
         <Dropdown
@@ -116,7 +115,6 @@ const Game = () => {
             if (!option) return;
             setStrideMode(option.key as any);
           }}
-          defaultSelectedKey="aim"
         />
       </div>
     </>
