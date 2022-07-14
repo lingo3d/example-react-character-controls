@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "lingodeploy examples/character-controls"
   },
   "dependencies": {
-    "@fluentui/react": "^8.77.0",
     "lingo3d-react": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -22,5 +22,11 @@
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4",
     "vite": "^2.9.12"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": false
   }
 }
