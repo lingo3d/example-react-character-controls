@@ -38,12 +38,12 @@ const Game = () => {
     keyboard.onKeyPress = (_, keys) => {
       // stride forward and stride right determine the direction the player is moving towards
       // 向前和向右的步伐，用于确定玩家的移动方向
-      if (keys.has("w")) dummy.strideForward = -10
-      else if (keys.has("s")) dummy.strideForward = 10
+      if (keys.has("w")) dummy.strideForward = -5
+      else if (keys.has("s")) dummy.strideForward = 5
       else dummy.strideForward = 0
 
-      if (keys.has("a")) dummy.strideRight = 10
-      else if (keys.has("d")) dummy.strideRight = -10
+      if (keys.has("a")) dummy.strideRight = 5
+      else if (keys.has("d")) dummy.strideRight = -5
       else dummy.strideRight = 0
     }
   }, [])
@@ -70,7 +70,7 @@ const Game = () => {
         <Dummy
           physics="character"
           ref={dummyRef}
-          metalnessFactor={-0.5}
+          metalnessFactor={-2}
           roughnessFactor={0}
           y={44.58}
           strideMove
