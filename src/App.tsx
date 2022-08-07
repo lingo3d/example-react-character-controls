@@ -50,7 +50,6 @@ const Game = () => {
 
   return (
     <World
-      defaultFog="white"
       defaultLight="env.jpg"
       bloomStrength={1}
       bloomThreshold={0.5}
